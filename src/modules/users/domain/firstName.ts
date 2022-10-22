@@ -10,6 +10,10 @@ export class FirstName extends ValueObject<FirstNameProps> {
     super(firstNameProps);
   }
 
+  getValue(): string {
+    return this.props.value;
+  }
+
   public static isValidFirstName(firstName: string): boolean {
     return firstName.trim().length >= 2;
   }

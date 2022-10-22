@@ -10,6 +10,10 @@ export class LastName extends ValueObject<LastNameProps> {
     super(lastNameProps);
   }
 
+  getValue(): string {
+    return this.props.value;
+  }
+
   public static isValidLastName(lastName: string): boolean {
     return lastName.trim().length >= 2;
   }
