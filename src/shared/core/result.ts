@@ -35,7 +35,7 @@ export class Result<T> {
     return this._value;
   }
 
-  public getErrorValue(): T {
+  public getErrorValue(): T | string {
     return this.error as T;
   }
 
