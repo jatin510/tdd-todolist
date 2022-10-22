@@ -19,13 +19,12 @@ export class Email extends ValueObject<EmailProps> {
     return re.test(email);
   }
 
-  public static create(emailProps: EmailProps): Result<Email> {
-    const { value } = emailProps;
-    if (!this.isValidEmail(value)) {
+  public static create(email: string): Result<Email> {
+    if (!this.isValidEmail(email)) {
       return Result.fail<Email>('Invalid email');
     }
 
-    const email = new Email(emailProps);
-    return Result.ok<Email>(email);
+    const newEmail = new Email({ value: email });
+    return Result.ok<Email>(newEmail);
   }
 }

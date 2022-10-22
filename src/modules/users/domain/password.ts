@@ -18,14 +18,13 @@ export class Password extends ValueObject<PasswordProps> {
     return password.length >= 5;
   }
 
-  public static create(passwordProps: PasswordProps): Result<Password> {
-    const { value } = passwordProps;
-    if (!this.isValidPassword(value)) {
+  public static create(password: string): Result<Password> {
+    if (!this.isValidPassword(password)) {
       return Result.fail<Password>('Invalid password');
     }
 
-    const password = new Password(passwordProps);
+    const newPassword = new Password({ value: password });
 
-    return Result.ok<Password>(password);
+    return Result.ok<Password>(newPassword);
   }
 }

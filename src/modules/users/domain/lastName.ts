@@ -17,13 +17,12 @@ export class LastName extends ValueObject<LastNameProps> {
   public static isValidLastName(lastName: string): boolean {
     return lastName.trim().length >= 2;
   }
-  public static create(lastNameProps: LastNameProps): Result<LastName> {
-    const { value } = lastNameProps;
-    if (!this.isValidLastName(value)) {
+  public static create(lastName: string): Result<LastName> {
+    if (!this.isValidLastName(lastName)) {
       return Result.fail<LastName>('Invalid LastName');
     }
 
-    const lastName = new LastName(lastNameProps);
-    return Result.ok<LastName>(lastName);
+    const newLastName = new LastName({ value: lastName });
+    return Result.ok<LastName>(newLastName);
   }
 }

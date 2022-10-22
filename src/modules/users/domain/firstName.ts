@@ -18,13 +18,12 @@ export class FirstName extends ValueObject<FirstNameProps> {
     return firstName.trim().length >= 2;
   }
 
-  public static create(firstNameProps: FirstNameProps): Result<FirstName> {
-    const { value } = firstNameProps;
-    if (!this.isValidFirstName(value)) {
+  public static create(firstName: string): Result<FirstName> {
+    if (!this.isValidFirstName(firstName)) {
       return Result.fail<FirstName>('Invalid FirstName');
     }
 
-    const firstName = new FirstName(firstNameProps);
-    return Result.ok<FirstName>(firstName);
+    const newFirstName = new FirstName({ value: firstName });
+    return Result.ok<FirstName>(newFirstName);
   }
 }

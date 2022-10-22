@@ -1,12 +1,13 @@
 import { Guard } from '@shared/core/guard';
 import { Result } from '@shared/core/result';
 import { Entity } from '@shared/domain/entity';
+import { Email } from './email';
 import { FirstName } from './firstName';
 import { LastName } from './lastName';
 import { Password } from './password';
 
 export interface UserProps {
-  email: string;
+  email: Email;
   firstName: FirstName;
   lastName: LastName;
   password: Password;
