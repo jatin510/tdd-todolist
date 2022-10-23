@@ -13,11 +13,12 @@
     "typeRoots": ["./node_modules/@types", "./src/@types"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "esModuleInterop": true,
-    "paths": {
-      "@shared/*": ["src/shared/*"],
-      "@module/*": ["src/modules/*"]
-    }
+    "esModuleInterop": true
+    // "baseUrl": ".",
+    // "paths": {
+    //   "@shared/*": ["src/shared/*"],
+    //   "@module/*": ["src/modules/*"]
+    // }
   },
   "include": ["src/*.ts", "src/**/*.ts", "src/**/*.js"],
   "exclude": ["node_modules", "src/**/*.spec.ts", "src/**/*.spec.js"]

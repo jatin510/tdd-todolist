@@ -1,12 +1,12 @@
-import { Email } from '@module/users/domain/email';
-import { FirstName } from '@module/users/domain/firstName';
-import { LastName } from '@module/users/domain/lastName';
-import { Password } from '@module/users/domain/password';
-import { User } from '@module/users/domain/user';
-import { IUserRepo } from '@module/users/repos/userRepo';
-import { Result } from '@shared/core/result';
-import { UseCase } from '@shared/core/useCase';
+import { Email } from '../../domain/email';
+import { FirstName } from '../../domain/firstName';
+import { LastName } from '../../domain/lastName';
+import { Password } from '../../domain/password';
+import { User } from '../../domain/user';
+import { IUserRepo } from '../../repos/userRepo';
 import { CreateUserDTO } from './createUserDto';
+import { Result } from '../../../../shared/core/result';
+import { UseCase } from '../../../../shared/core/useCase';
 
 type CreateUserSuccess = {
   type: 'CreateUserSuccess';
