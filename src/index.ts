@@ -1,1 +1,1 @@
-console.log('index.ts');
+import './shared/infra/http/app';
