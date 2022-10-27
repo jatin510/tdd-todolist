@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  todolist-server-ddd:
+    build:
+      context: ../..
+      dockerfile: config/docker/server/Dockerfile
+
+    ports:
+      - 3000:3000
+
+    restart: always
+    env_file: ../../.env
