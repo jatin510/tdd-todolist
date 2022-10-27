@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "rimraf ./dist && tsc",
-    "start": "pnpm build && node dist/index.js",
+    "start": "yarn build && node dist/index.js",
     "dev": "ts-node-dev --respawn src/index.ts --watch-all",
     "test": "jest --watch-all"
   },
