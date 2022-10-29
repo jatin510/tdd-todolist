@@ -3,7 +3,7 @@ import { createUserController } from '../../../useCases/createUser';
 
 const userRouter = express.Router();
 
-userRouter.get('/', (req, res) => res.send('hello from users'));
+userRouter.get('/', (req, res) => res.send('hello from users routers'));
 
 userRouter.post('/', (req, res) => createUserController.execute(req, res));
 
