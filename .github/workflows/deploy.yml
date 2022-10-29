@@ -25,4 +25,4 @@ jobs:
           docker tag todo-list-server jatin510/todolist:$(date +%s)
 
       - name: Docker Push
-        run: docker push ${{secrets.DOCKER_USER}}/todolist
+        run: docker push ${{secrets.DOCKER_USER}}/todolist:$(date +%s)
