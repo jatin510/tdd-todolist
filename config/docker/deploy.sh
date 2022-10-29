@@ -1,5 +1,5 @@
 echo 'Starting to Deploy...'
-ssh ubuntu@3.109.52.163 "
+ssh root@194.195.113.217 "
 	sudo docker info
 	cd /home/ubuntu/todolist-server/config/docker
 	sudo docker pull docker pull jatin510/todo-list-server:latest
