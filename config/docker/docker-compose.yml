@@ -2,6 +2,7 @@ version: '3'
 
 services:
   todolist-server-ddd:
+    image: todo-list-server
     build:
       context: ../..
       dockerfile: config/docker/server/Dockerfile
