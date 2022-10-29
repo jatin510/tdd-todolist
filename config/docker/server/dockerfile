@@ -1,7 +1,7 @@
 FROM node:16
 
-RUN mkdir todolist-server
-WORKDIR /todolist-server
+RUN mkdir tdd-todolist
+WORKDIR /tdd-todolist
 
 
 COPY package*.json ./
