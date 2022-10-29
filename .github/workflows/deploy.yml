@@ -22,7 +22,7 @@ jobs:
       - name: Build the Docker image
         run: |
           docker compose -f ./config/docker/docker-compose.yml build
-          docker tag todo-list-server jatin510/todolist:$(date +%s)
+          docker tag todo-list-server jatin510/todolist:latest
 
       - name: Docker Push
-        run: docker push ${{secrets.DOCKER_USER}}/todolist:$(date +%s)
+        run: docker push ${{secrets.DOCKER_USER}}/todolist:latest
